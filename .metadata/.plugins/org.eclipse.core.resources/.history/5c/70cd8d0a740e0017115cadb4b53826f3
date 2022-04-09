@@ -1,0 +1,44 @@
+/*
+ * Write a java application that finds the smallest of several integers. 
+ * Prompt the user for the number of integers that will be input, then prompt the user for 
+ * that number of integers. Evaluate the integers to determine the smallest value.
+
+Run the program to test for 3 numbers
+-- 50, 10, 100
+
+Run the program a second time to test for 5 input number;
+-- 7, -2, 0, 15, 5
+
+*/
+
+import java.util.Scanner;
+public class integers {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner input = new Scanner(System.in);
+		
+		int integerCount = 0;
+		int integer = 0;
+		int smallest = 0;
+		
+		System.out.println("How many integers are you going to feed me?");
+		integerCount = input.nextInt();
+		
+		int[] array = new int[integerCount];
+		
+		if (integerCount == 0) {
+			System.out.println("You did not feed me any integers!  Good night.");
+		} 
+			
+		for (int i = 0; i < integerCount; i++) {
+			System.out.println("Enter the integers, one at a time then press Enter");
+			array[i] = input.nextInt();
+		}
+		
+		System.out.println("The numbers entered are: " );
+		
+			input.close(); // closes the scanner
+	}	
+}
